@@ -5,12 +5,19 @@ Desenvolver um aplicação que receba o json abaixo, e responda o resultado base
 ### modelo de entrada
 ```json
 {
-  "valorTotal":         number, // valor total a ser parcelado
-  "quantidadeParcelas": number, // quantidades de parcelas que o valor será rateado
-  "tipoResposata":      ENUM,   // enum que varia entre SIMPLES e COMPLETA
-  "tipoParcelamento":   ENUM    // enum que varia entre RESTO_PRIMEIRA_PARCELA e RESTO_ULTIMA_PARCELA, RESTO_NAS_PRIMEIRAS_PARCELAS, RESTO_NAS_ULTIMAS_PARCELAS
+  "valorTotal": "number",
+  "quantidadeParcelas": "number",
+  "tipoResposata": "ENUM",
+  "tipoParcelamento": "ENUM"
 }
 ```
+Onde
+campo|observação
+-----|-----
+valorTotal|valor total a ser parcelado
+quantidadeParcelas|quantidades de parcelas que o valor será rateado
+tipoResposata|enum que varia entre SIMPLES e COMPLETA
+tipoParcelamento|enum que varia entre RESTO_PRIMEIRA_PARCELA e RESTO_ULTIMA_PARCELA, RESTO_NAS_PRIMEIRAS_PARCELAS, RESTO_NAS_ULTIMAS_PARCELAS
 
 ## Regras
 - o tipoParcelamento define a forma que o "resto" do parcelamento deve ser alocado
@@ -24,11 +31,11 @@ Desenvolver um aplicação que receba o json abaixo, e responda o resultado base
 ```json
 {
   "parcelamento": [{
-    "valorParcela": number,
-    "parcelaInicial": number,
-    "parcelaFinal": number
+    "valorParcela": "number",
+    "parcelaInicial": "number",
+    "parcelaFinal": "number"
   }],
-  "entrada": modelo de entrada recebido
+  "entrada": "{} -> modelo de entrada recebido"
 }
 ```
 
@@ -36,9 +43,9 @@ Desenvolver um aplicação que receba o json abaixo, e responda o resultado base
 ```json
 {
   "parcelamento": [{
-    "valorParcela": number,
-    "numeroParcela": number
+    "valorParcela": "number",
+    "numeroParcela": "number"
   }],
-  "entrada": modelo de entrada recebido
+  "entrada": "{} -> modelo de entrada recebido"
 }
 ```
